@@ -1,0 +1,21 @@
+.products-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.to-cart {
+    border: none;
+    display: block;
+    margin: .5vh auto;
+    font-size: 1em;
+    padding: 1vh 2vw;
+    transition: .3s;
+}
+
+.to-cart:hover {
+    transition: .3s;
+    cursor: pointer;
+    background-color: rgb(0, 24, 77);
+    color: white;
+}

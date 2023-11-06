@@ -1,0 +1,26 @@
+CREATE TABLE Client (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    login VARCHAR(255) NOT NULL,
+    mail VARCHAR(255) NOT NULL,
+    password LONGTEXT NOT NULL
+);
+
+CREATE TABLE Reviews (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    text LONGTEXT NOT NULL
+);
+
+CREATE TABLE Products (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    image LONGTEXT NOT NULL,
+    price INT NOT NULL
+);
+
+CREATE TABLE UserCart (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    client_id INT NOT NULL,
+    product_id INT NOT NULL,
+    FOREIGN KEY (client_id) REFERENCES Client(id),
+    FOREIGN KEY (product_id) REFERENCES Products(id)
+);

@@ -1,0 +1,30 @@
+header * {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #edab0fff;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: rgb(0, 24, 77);
+    padding: 1vw;
+}
+
+header img {
+    width: 5vw;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+}
+
+header h1 {
+    margin: 5vh 1vw;
+}
+
+header nav a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

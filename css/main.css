@@ -1,0 +1,57 @@
+.content {
+    width: 70vw;
+    margin: 0 auto; 
+    box-shadow: 1px 2px 12px rgba(179, 179, 179, 0.753);
+    border-radius: 1vw;
+    padding-bottom: 1vw;
+}
+
+.about {
+    background-color: rgb(0, 24, 77);
+    color: white;
+    font-size: 1.2em;
+    padding: .5vw;
+    margin-top: 1vw;
+    border-radius: 1vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rewievs-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1vw;
+}
+
+.review-item {
+    background-color: rgb(0, 24, 77);
+    color: white;
+    width: 20vw;
+    font-size: 1.1em;
+    flex-shrink: 0;
+    border-radius: 1vw;
+    padding: .5vw;
+    margin: 1vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.more-products {
+    text-decoration: none;
+    text-align: center;
+    margin: 1vh auto;
+    color: rgb(0, 24, 77);
+    background-color: rgba(179, 179, 179, 0.753);
+    display: block;
+    font-size: 1.2em;
+    width: 10vw;
+    padding: 1vh 2vw;
+    border-radius: .5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: .3s;
+}
+
+.more-products:hover {
+    transition: .3s;
+    background-color: rgb(0, 24, 77);
+    color: white;
+}

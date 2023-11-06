@@ -1,0 +1,18 @@
+.product-item {
+    box-shadow: 1px 2px 12px rgba(161, 161, 161, 0.685);
+    width: 10vw;
+    padding: 1vw;
+    border-radius: 1vw;
+    margin: 1vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.product-item img {
+    width: 10vw;
+    height: 15vh;
+}
+
+.products-list {
+    display: flex;
+    flex-direction: row;
+}
