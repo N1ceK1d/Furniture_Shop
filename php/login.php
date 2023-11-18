@@ -13,7 +13,7 @@
                 session_start();
                 $result = $conn->query($sql);
                 foreach ($result as $row) {
-                    $_SESSION['user_id'] = $row['id'];
+                    $_SESSION['loggined'] = $row['id'];
                 }
                 header("Location: ../pages/catalog.php");
             }

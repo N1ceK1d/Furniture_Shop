@@ -19,3 +19,25 @@
     background-color: rgb(0, 24, 77);
     color: white;
 }
+
+.from-cart {
+    border: none;
+    display: block;
+    margin: .5vh auto;
+    font-size: 1em;
+    padding: 1vh 2vw;
+    transition: .3s;
+}
+
+.from-cart:hover {
+    transition: .3s;
+    cursor: pointer;
+    background-color: rgb(182, 13, 1);
+    color: white;
+}
+
+.sum {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 1.2em;
+}

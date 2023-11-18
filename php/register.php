@@ -4,7 +4,7 @@
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     require("connection.php");
-    $sql = "SELECT login FROM Client;";
+    $sql = "SELECT login FROM Client WHERE login = '$login';";
     if(mysqli_num_rows($conn->query($sql)) < 1)
     {
         $sql = "INSERT INTO Client (login, mail, password) VALUES ('$login', '$email', '$password');";
@@ -13,7 +13,7 @@
         session_start();
         $result = $conn->query($sql);
         foreach ($result as $row) {
-            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['loggined'] = $row['id'];
         }
         header("Location: ../pages/catalog.php");
     }

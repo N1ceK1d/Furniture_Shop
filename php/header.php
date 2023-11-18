@@ -14,8 +14,15 @@
     </div>
     <nav>
         <a href="http://localhost/Furniture_Shop/pages/catalog.php">Каталог</a>
-        <a href="http://localhost/Furniture_Shop/pages/login.html">Войти</a>
-        <a href="http://localhost/Furniture_Shop/pages/shopping_cart.php">Корзина</a>
+        <?php
+            session_start();
+            if (isset($_SESSION['loggined'])):
+        ?>
+            <a href="http://localhost/Furniture_Shop/pages/shopping_cart.php">Корзина</a>
+            <a href="http://localhost/Furniture_Shop/php/exit.php">Выйти</a>
+        <?php else: ?>
+            <a href="http://localhost/Furniture_Shop/pages/login.html">Войти</a>
+        <?php endif; ?>
     </nav>
     </header>
 </body>

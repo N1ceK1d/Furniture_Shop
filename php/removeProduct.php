@@ -10,8 +10,8 @@
     echo $product_id;
 
     require("connection.php");
-    $sql = "INSERT INTO UserCart (client_id, product_id) VALUES ($user_id, $product_id);";
+    $sql = "DELETE FROM UserCart WHERE id = $product_id;";
     $conn->query($sql);
     $conn->close();
-    header("Location: http://localhost/Furniture_Shop/pages/catalog.php");
+    header("Location: http://localhost/Furniture_Shop/pages/shopping_cart.php");
 ?>

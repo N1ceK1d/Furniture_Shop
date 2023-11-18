@@ -11,6 +11,7 @@
 <body>
     <?php 
     require("../php/header.php");
+    session_start();
     ?>
     <div class="products-list">
         <?php
@@ -26,9 +27,12 @@
                             <div>
                                 <p class='title'>".$row['name']."</p>
                                 <p class='price'>".$row['price']."</p>
-                            </div>
-                            <input type='submit' class='to-cart' value='В корзину'/>
-                        </form>
+                            </div>";
+                            if(isset($_SESSION['loggined'])) 
+                            {
+                                echo " <input type='submit' class='to-cart' value='В корзину'/>";
+                            }
+                        echo "</form>
                     </div>";
                 }
             }
