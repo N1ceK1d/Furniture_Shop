@@ -16,8 +16,11 @@
         <a href="http://localhost/Furniture_Shop/pages/catalog.php">Каталог</a>
         <?php
             session_start();
-            if (isset($_SESSION['loggined'])):
+            if (isset($_SESSION['loggined']) && (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] == 1)):
         ?>
+            <a href="http://localhost/Furniture_Shop/pages/admin.php">Администрирование</a>
+            <a href="http://localhost/Furniture_Shop/php/exit.php">Выйти</a>
+        <?php elseif(isset($_SESSION['loggined'])): ?>
             <a href="http://localhost/Furniture_Shop/pages/shopping_cart.php">Корзина</a>
             <a href="http://localhost/Furniture_Shop/php/exit.php">Выйти</a>
         <?php else: ?>

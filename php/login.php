@@ -9,11 +9,12 @@
     {
         foreach ($result as $row) {
             if(password_verify($password, $row['password'])) {
-                $sql = "SELECT id FROM Client WHERE login = '$login'";
+                $sql = "SELECT id, isAdmin FROM Client WHERE login = '$login'";
                 session_start();
                 $result = $conn->query($sql);
                 foreach ($result as $row) {
                     $_SESSION['loggined'] = $row['id'];
+                    $_SESSION['isAdmin'] = $row['isAdmin'];
                 }
                 header("Location: ../pages/catalog.php");
             }
